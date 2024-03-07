@@ -1,0 +1,52 @@
+************************************************
+
+Structure of a preperly written unit test:
+AAA principles:
+  - arrange
+  - act
+  - assert
+
+Setup
+Teardown
+
+Test sould be independent
+Reduce code duplication
+
+************************************************
+
+For watch mode
+--------------
+package.json
+ "scripts": {
+    "test": "jest --watch"
+  },
+
+npm i -D typescript jest ts-jest @types/jest ts-node
+
+ configuration jest file: npx ts-jest config:init
+
+create ts congiration file: tsconfig.json.
+    {
+  "compilerOptions": {
+    "esModuleInterop": true
+  }
+}
+
+
+ALIASES
+----------
+xit = it.skip
+fit = it.only
+
+
+COVERAGE
+--------
+jest.config.ts
+
+collectCoverage: true,
+collectCoverageFrom:[
+  '<rootDir>/src/app/**/*.ts'
+
+]
+
+PassChecker setup. Video 23!
